@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee details</title>
+    <link rel="stylesheet" href="assets/emp.css">
+</head>
+<body>
+    <h2>Employee Details</h2>
+    <table>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Mobile no</th>
+            <th>Mail id</th>
+            <th>Supervisor ID</th>
+            <th>Branch no</th>
+        </tr>
+        <% for(var i=0; i < employees.length; i++) { %>
+            <tr>
+              <td><%= employees[i].emp_id %></td>
+              <td><%= employees[i].emp_name %></td>
+              <td><%= employees[i].emp_dob %></td>
+              <td><%= employees[i].emp_gender %></td>
+              <td><%= employees[i].emp_pos %></td>
+              <td><%= employees[i].emp_sal %></td>
+              <td><%= employees[i].emp_mob %></td>
+              <td><%= employees[i].emp_mail %></td>
+              <td><%= employees[i].Ssno %></td>
+              <td><%= employees[i].emp_Bno %></td>
+            </tr>
+         <% } %>
+    </table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="assets/welcome.css">
+</head>
+<body>
+    <div class="column">
+        <div class="details">
+          <div class="row">
+            <div class="image">
+                <% if((items.admin_gender)=="F"){ %>
+                    <img src="https://cdn.allthings.how/wp-content/uploads/2020/10/allthings.how-how-to-change-your-profile-picture-on-google-meet-profile-photo-759x427.png?width=600">
+                  <% } else{ %>  
+                    <img src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg">
+                 <% } 
+                %>
+            </div>
+            <h4>ID:<%= items.admin_id %></h4>
+            <h4>NAME:<%= items.admin_name %></h4>
+            <h4>AGE:<%= items.admin_age %></h4>
+            <h4>GENDER:<%- items.admin_gender -%></h4>
+            <h4>MOBILE:<%- items.admin_mob -%></h4>
+            <h4>MAIL ID:<%- items.admin_mail -%></h4>
+          </div>
+        </div>
+    </div>
+    
+    <div class="column">
+        <div class="func">
+            <div class="row">
+                <a href="/emp"><div class="tile">
+                    <h2>View employee details</h2>
+                </div></a>
+                <a href="/insert"><div class="tile">
+                    <h2>Insert employee</h2>
+                </div></a>
+                <a href="/delete"><div class="tile">
+                    <h2>Delete employee record</h2>
+                </div></a>
+                <a href="/salary"><div class="tile">
+                    <h2>salary</h2>
+                </div></a>
+                <a href="/leave"><div class="tile">
+                    <h2>Leave status</h2>
+                </div></a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,14 @@
+
+.tile{
+    width: 30%;
+    height: 40px;
+    background-color: #7f379b;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1em;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+
+
+}

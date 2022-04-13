@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave status</title>
+    <link rel="stylesheet" href="assets/emp.css">
+</head>
+<body>
+    <h3>Employee Leave Details</h3>
+    <table>
+        <tr>
+            <th>Leave ID</th>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>No of days</th>
+            <th>Reason</th>
+            <th>Status</th>
+        </tr>
+        <% for(var i=0; i < leaves.length; i++) { %>
+            <tr>
+              <td><%= leaves[i].leaveid %></td>
+              <td><%= leaves[i].emp_id %></td>
+              <td><%= leaves[i].emp_name %></td>
+              <td><%= leaves[i].no_of_days %></td>
+              <td><%= leaves[i].description %></td>
+              <td><%= leaves[i].status %></td>
+            </tr>
+         <% } %>
+    </table>
+    <form action="/l" method="POST">
+        <label>Enter the Leave ID of leave to be approved:</label>
+        <input type="text" name="userid" class="input-field" placeholder="userid" />
+        <input type="submit" name="vote" value="ACCEPT" />
+        <input type="submit" name="vote" value="REJECT" />
+    </form>
+</body>
+</html>
